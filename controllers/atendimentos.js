@@ -11,10 +11,8 @@ module.exports = app => {
     });
 
     app.post('/atendimentos', (req, res) => {
-        // console.log(req.body);
         const atendimento = req.body;
         Atendimento.adiciona(atendimento, res);
-        // res.send('Post atendimento');
     });
 
     app.patch('/atendimentos/:id', (req, res) => {
